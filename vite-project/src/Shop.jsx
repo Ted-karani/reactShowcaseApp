@@ -1,11 +1,10 @@
 import { useState } from 'react'
-import { useNuShop } from '../context/NuShopContext'
-import Sidebar from '../components/Sidebar'
-import ProductCard from '../components/ProductCard'
-import './Shop.css'
+import { useShop } from './Context'
+import Sidebar from './Sidebar'
+import ProductCard from './ProductCard'
 
 function Shop() {
-  const { coffeeList, loading, error } = useNuShop()
+  const { coffeeList, loading, error } = useShop()
 
   const [searchText, setSearchText] = useState('')
   const [selectedLocations, setSelectedLocations] = useState([])
@@ -23,20 +22,18 @@ function Shop() {
   for (let i = 0; i < coffeeList.length; i++) {
     const coffee = coffeeList[i]
 
-    const nameMatches = coffee.name.toLowerCase().includes(searchText.toLowerCase())
-
     let locationMatches = false
     if (selectedLocations.length === 0) {
       locationMatches = true
     } else {
-      for (let j = 0; j < selectedLocations.length; j++) {
-        if (selectedLocations[j] === coffee.location) {
+      for (let k = 0; k < selectedLocations.length; k++) {
+        if (selectedLocations[k] === coffee.location) {
           locationMatches = true
         }
       }
     }
 
-    if (nameMatches && locationMatches) {
+    if (locationMatches) {
       coffeesToShow.push(coffee)
     }
   }

@@ -1,11 +1,9 @@
 import { NavLink } from 'react-router-dom'
+import DarkMode from './DarkMode'
 
-export default function Navbar(){
+export default function Navbar() {
   return (
     <nav className="navbar">
-      <span className="nav-logo">
-        <span>Shop</span>
-      </span>
 
       <NavLink to="/" className="nav-link" end>
         Home
@@ -19,7 +17,8 @@ export default function Navbar(){
         Admin Portal
       </NavLink>
 
+      <DarkMode />
+
     </nav>
   )
 }
-

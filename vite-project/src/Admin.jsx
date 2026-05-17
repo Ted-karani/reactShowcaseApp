@@ -3,7 +3,6 @@ import { useShop } from './Context'
 import CoffeeForm from './CoffeeForm'
 import ProductCard from './ProductCard'
 
-
 function Admin() {
   const { coffeeList, loading, error, addCoffee, updateCoffee, deleteCoffee } = useShop()
 
@@ -28,7 +27,6 @@ function Admin() {
 
   function handleDelete(id) {
     deleteCoffee(id)
-
     if (editingCoffee && editingCoffee.id === id) {
       setEditingCoffee(null)
     }

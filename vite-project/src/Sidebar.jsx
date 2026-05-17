@@ -1,4 +1,4 @@
-import './Sidebar.css'
+
 
 function Sidebar(props) {
   const searchText = props.searchText
