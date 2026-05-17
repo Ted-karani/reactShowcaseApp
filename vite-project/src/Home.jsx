@@ -1,13 +1,12 @@
-import { usemyShop } from './Context'
-import './Home.css'
+import { useShop } from './Context'
 
 function Home() {
-  const { storeInfo, loading, error } = usemyShop()
+  const { storeInfo, loading, error } = useShop()
 
   if (loading) {
     return (
       <div className="home-page">
-        <p className="status-msg">Loading...</p>
+        <p>Loading...</p>
       </div>
     )
   }
@@ -15,16 +14,14 @@ function Home() {
   if (error) {
     return (
       <div className="home-page">
-        <p className="status-msg error-msg">{error}</p>
+        <p>{error}</p>
       </div>
     )
   }
 
   return (
     <div className="home-page">
-      <h1 className="home-title">
-        Nu<span className="accent">Shop</span>
-      </h1>
+      <h1 className="home-title">{storeInfo.name}</h1>
       <p className="home-subtitle">{storeInfo.description}</p>
       <p className="home-phone">Call us: {storeInfo.phone_number}</p>
     </div>

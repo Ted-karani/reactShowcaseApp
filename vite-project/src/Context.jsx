@@ -1,89 +1,82 @@
 import { createContext, useContext, useState, useEffect } from "react"
 
-const mycontext = createContext()
+const ShopContext = createContext()
 
-export  function mycontextProvider({children}){
+export function ShopProvider({ children }) {
     const [coffeeList, setCoffeeList] = useState([])
     const [storeInfo, setStoreInfo] = useState(null)
-    const[loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(true)
     const [error, setError] = useState('')
 
-    useEffect(function(){
+    useEffect(function () {
         fetch('/db.json')
-        .then(function(response){
-            return response.json
-        })
-        .then(function (data){
-            setCoffeeList(data.coffee)
-            setStoreInfo(data.store_info[0])
-            setLoading(false)
-        })
-        .catch(function () {
-            setError('an error occured monsuir')
-            setLoading(false)
-        })
+            .then(function (response) {
+                return response.json()
+            })
+            .then(function (data) {
+                setCoffeeList(data.coffee)
+                setStoreInfo(data.store_info[0])
+                setLoading(false)
+            })
+            .catch(function () {
+                setError('An error occurred')
+                setLoading(false)
+            })
+    }, [])
 
-    },[])
-
-    function addCoffee(newCoffee){
+    function addCoffee(newCoffee) {
         const newId = coffeeList.length + 1
         const coffeeToAdd = {
-    id: newId,
-    name: newCoffee.name,
-    description: newCoffee.description,
-    origin: newCoffee.origin,
-    price: newCoffee.price,
-    location: newCoffee.location,
-  }
-
-  const newList = [...coffeeList, coffeeToAdd]
-  setCoffeeList(newList)
-}
-
-function updateCoffee(id, updates) {
-  const newList = []
-
-  for (let i = 0; i < coffeeList.length; i++) {
-    if (coffeeList[i].id === id) {
-      newList.push(updates)
-    } else {
-      newList.push(coffeeList[i])
+            id: newId,
+            name: newCoffee.name,
+            description: newCoffee.description,
+            origin: newCoffee.origin,
+            price: newCoffee.price,
+            location: newCoffee.location,
+        }
+        const newList = [...coffeeList, coffeeToAdd]
+        setCoffeeList(newList)
     }
-  }
 
-  setCoffeeList(newList)
-}
-
-function deleteCoffee(id) {
-  const newList = []
-
-  for (let i = 0; i < coffeeList.length; i++) {
-    if (coffeeList[i].id !== id) {
-      newList.push(coffeeList[i])
+    function updateCoffee(id, updates) {
+        const newList = []
+        for (let i = 0; i < coffeeList.length; i++) {
+            if (coffeeList[i].id === id) {
+                newList.push(updates)
+            } else {
+                newList.push(coffeeList[i])
+            }
+        }
+        setCoffeeList(newList)
     }
-  }
 
-  setCoffeeList(newList)
-}
-return(
-    <myContext.Provider
-      value={{
-        coffeeList,
-        storeInfo,
-        loading,
-        error,
-        addCoffee,
-        updateCoffee,
-        deleteCoffee,
-      }}
-    >
-      {children}
-    </myContext.Provider>
-)
-
+    function deleteCoffee(id) {
+        const newList = []
+        for (let i = 0; i < coffeeList.length; i++) {
+            if (coffeeList[i].id !== id) {
+                newList.push(coffeeList[i])
+            }
+        }
+        setCoffeeList(newList)
     }
-export function useShop(){
-    return useContext(mycontext)
+
+    return (
+        <ShopContext.Provider
+            value={{
+                coffeeList,
+                storeInfo,
+                loading,
+                error,
+                addCoffee,
+                updateCoffee,
+                deleteCoffee,
+            }}
+        >
+            {children}
+        </ShopContext.Provider>
+    )
 }
 
-
+export function useShop() {
+    return useContext(ShopContext)
+}
