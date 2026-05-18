@@ -1,4 +1,7 @@
-
+// make sure i use props to earn points and the ---.name part
+//this is like what will have the products so i create paragraphs and ohh an artricle for storing the main things of coffee
+// remember name, description ,  origin ,  price , location
+//price i can use usd since its not a must i use ksh (its not written in instructions)
     
     export default function ProductCard(props) {
   const coffee = props.coffee

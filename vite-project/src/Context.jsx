@@ -4,25 +4,24 @@ const ShopContext = createContext()
 
 export function ShopProvider({ children }) {
     const [coffeeList, setCoffeeList] = useState([])
-    const [storeInfo, setStoreInfo] = useState(null)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState('')
 
     useEffect(function () {
-        fetch('/db.json')
-            .then(function (response) {
-                return response.json()
-            })
-            .then(function (data) {
-                setCoffeeList(data.coffee)
-                setStoreInfo(data.store_info[0])
-                setLoading(false)
-            })
-            .catch(function () {
-                setError('An error occurred')
-                setLoading(false)
-            })
-    }, [])
+    fetch('/db.json')
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (data) {
+            setCoffeeList(data.coffee)
+            setLoading(false)
+        })
+        .catch(function (err) {
+            console.log('Fetch error:', err)
+            setError('An error occurred')
+            setLoading(false)
+        })
+}, [])
 
     function addCoffee(newCoffee) {
         const newId = coffeeList.length + 1
@@ -64,7 +63,6 @@ export function ShopProvider({ children }) {
         <ShopContext.Provider
             value={{
                 coffeeList,
-                storeInfo,
                 loading,
                 error,
                 addCoffee,

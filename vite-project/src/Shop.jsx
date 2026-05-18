@@ -1,3 +1,14 @@
+//this is the middle part that should have all the flavors of the coffee
+//so the coffee are in middle like they take around 3/4 from right side so that the other 1/4 from left is taken by the sideBar
+//above the sidebar is the search part
+//tryyyyy to make styling same like the mock project
+//make sure i use many states and context 
+// in context i remember the provider and i try to desructure if possible to earn marks and points
+// remember to use false and true in the statesss
+// true and false basically work like toogle on and off
+// refer to content in canves incase i have any query
+
+
 import { useState } from 'react'
 import { useShop } from './Context'
 import Sidebar from './Sidebar'

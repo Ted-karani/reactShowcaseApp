@@ -1,3 +1,5 @@
+
+// for darkmode toogle to increase styling marks hopefully 
 import React from "react";
 
 const DarkModeToggle = ({ darkMode, setDarkMode }) => {

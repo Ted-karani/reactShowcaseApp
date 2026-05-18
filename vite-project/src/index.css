@@ -1,22 +1,3 @@
-
-:root {
-  --bg: #f5f0eb;
-  --navbar-bg: #6b4226;
-  --navbar-text: #f5f0eb;
-  --card-bg: #e8ddd4;
-  --text: #2c1a0e;
-  --text-light: #6b4226;
-  --button-bg: #6b4226;
-  --button-text: #fff;
-  --delete-bg: #8b2020;
-  --border: #c4a882;
-  --input-bg: #fff;
-}
-
-
-
-
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -24,15 +5,15 @@
 }
 
 body {
-  background-color: var(--bg);
-  color: var(--text);
+  background-color: #f5f0eb;
+  color: #2c1a0e;
   font-family: Arial, sans-serif;
   font-size: 16px;
 }
 
 
 .navbar {
-  background-color: var(--navbar-bg);
+  background-color: #6b4226;
   display: flex;
   align-items: center;
   padding: 14px 24px;
@@ -40,7 +21,7 @@ body {
 }
 
 .nav-link {
-  color: var(--navbar-text);
+  color: #f5f0eb;
   text-decoration: none;
   font-size: 16px;
 }
@@ -55,11 +36,8 @@ body {
 }
 
 
-
-
-
 .home-page {
-  background-color: var(--bg);
+  background-color: #f5f0eb;
   min-height: 80vh;
   display: flex;
   flex-direction: column;
@@ -71,19 +49,19 @@ body {
 
 .home-title {
   font-size: 52px;
-  color: var(--text);
+  color: #2c1a0e;
   margin-bottom: 16px;
 }
 
 .home-subtitle {
   font-size: 18px;
-  color: var(--text-light);
+  color: #6b4226;
   margin-bottom: 10px;
 }
 
 .home-phone {
   font-size: 15px;
-  color: var(--text-light);
+  color: #6b4226;
 }
 
 
@@ -95,28 +73,28 @@ body {
 .shop-status {
   padding: 40px;
   text-align: center;
-  color: var(--text-light);
+  color: #6b4226;
 }
 
 .no-results {
   padding: 40px;
-  color: var(--text-light);
+  color: #6b4226;
 }
 
 .sidebar {
   width: 200px;
   padding: 20px;
-  border-right: 1px solid var(--border);
-  background-color: var(--bg);
+  border-right: 1px solid #c4a882;
+  background-color: #f5f0eb;
 }
 
 .search-input {
   width: 100%;
   padding: 8px 10px;
   border-radius: 8px;
-  border: 1px solid var(--border);
-  background-color: var(--input-bg);
-  color: var(--text);
+  border: 1px solid #c4a882;
+  background-color: #fff;
+  color: #2c1a0e;
   font-size: 14px;
   margin-bottom: 20px;
 }
@@ -124,7 +102,7 @@ body {
 .filter-title {
   font-weight: bold;
   margin-bottom: 10px;
-  color: var(--text);
+  color: #2c1a0e;
   font-size: 14px;
 }
 
@@ -134,7 +112,7 @@ body {
   gap: 8px;
   margin-bottom: 8px;
   font-size: 14px;
-  color: var(--text);
+  color: #2c1a0e;
   cursor: pointer;
 }
 
@@ -152,41 +130,41 @@ body {
 
 
 .product-card {
-  background-color: var(--card-bg);
+  background-color: #e8ddd4;
   border-radius: 10px;
   padding: 16px;
-  border: 1px solid var(--border);
+  border: 1px solid #c4a882;
 }
 
 .card-name {
   font-size: 17px;
   font-weight: bold;
-  color: var(--text);
+  color: #2c1a0e;
   margin-bottom: 6px;
 }
 
 .card-desc {
   font-size: 13px;
-  color: var(--text-light);
+  color: #6b4226;
   margin-bottom: 10px;
 }
 
 .card-origin {
   font-size: 13px;
-  color: var(--text-light);
+  color: #6b4226;
   margin-bottom: 6px;
 }
 
 .card-price {
   font-size: 16px;
   font-weight: bold;
-  color: var(--text);
+  color: #2c1a0e;
   margin-bottom: 4px;
 }
 
 .card-location {
   font-size: 13px;
-  color: var(--text-light);
+  color: #6b4226;
   margin-bottom: 12px;
 }
 
@@ -196,8 +174,8 @@ body {
 }
 
 .edit-btn {
-  background-color: var(--button-bg);
-  color: var(--button-text);
+  background-color: #6b4226;
+  color: #fff;
   border: none;
   padding: 6px 14px;
   border-radius: 6px;
@@ -206,7 +184,7 @@ body {
 }
 
 .delete-btn {
-  background-color: var(--delete-bg);
+  background-color: #8b2020;
   color: #fff;
   border: none;
   padding: 6px 14px;
@@ -230,11 +208,11 @@ body {
 .admin-status {
   padding: 40px;
   text-align: center;
-  color: var(--text-light);
+  color: #6b4226;
 }
 
 .admin-list-title {
-  color: var(--text);
+  color: #2c1a0e;
   margin-bottom: 16px;
   margin-top: 30px;
 }
@@ -245,19 +223,18 @@ body {
   gap: 16px;
 }
 
-
 .coffee-form {
-  background-color: var(--card-bg);
+  background-color: #e8ddd4;
   border-radius: 10px;
   padding: 24px;
-  border: 1px solid var(--border);
+  border: 1px solid #c4a882;
   max-width: 500px;
   margin: 0 auto;
 }
 
 .form-title {
   text-align: center;
-  color: var(--text);
+  color: #2c1a0e;
   margin-bottom: 20px;
   font-size: 20px;
 }
@@ -271,7 +248,7 @@ body {
   display: block;
   margin-bottom: 6px;
   font-size: 14px;
-  color: var(--text);
+  color: #2c1a0e;
 }
 
 .form-group input,
@@ -280,9 +257,9 @@ body {
   width: 100%;
   padding: 8px 10px;
   border-radius: 6px;
-  border: 1px solid var(--border);
-  background-color: var(--input-bg);
-  color: var(--text);
+  border: 1px solid #c4a882;
+  background-color: #fff;
+  color: #2c1a0e;
   font-size: 14px;
 }
 
@@ -299,7 +276,7 @@ body {
 }
 
 .submit-btn {
-  background-color: var(--delete-bg);
+  background-color: #8b2020;
   color: #fff;
   border: none;
   padding: 10px 24px;
@@ -309,7 +286,7 @@ body {
 }
 
 .cancel-btn {
-  background-color: var(--button-bg);
+  background-color: #6b4226;
   color: #fff;
   border: none;
   padding: 10px 24px;
