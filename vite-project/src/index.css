@@ -174,7 +174,7 @@ body {
 }
 
 .edit-btn {
-  background-color: #6b4226;
+  background-color: #51d636;
   color: #fff;
   border: none;
   padding: 6px 14px;
@@ -184,7 +184,7 @@ body {
 }
 
 .delete-btn {
-  background-color: #8b2020;
+  background-color: #ff0505;
   color: #fff;
   border: none;
   padding: 6px 14px;
@@ -276,7 +276,7 @@ body {
 }
 
 .submit-btn {
-  background-color: #8b2020;
+  background-color: #5fef05;
   color: #fff;
   border: none;
   padding: 10px 24px;
@@ -286,7 +286,7 @@ body {
 }
 
 .cancel-btn {
-  background-color: #6b4226;
+  background-color: #e32012;
   color: #fff;
   border: none;
   padding: 10px 24px;
