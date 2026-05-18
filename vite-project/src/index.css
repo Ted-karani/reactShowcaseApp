@@ -1,4 +1,4 @@
-/* ---- default light mode colors ---- */
+
 :root {
   --bg: #f5f0eb;
   --navbar-bg: #6b4226;
@@ -13,22 +13,10 @@
   --input-bg: #fff;
 }
 
-/* ---- dark mode colors (when body has class "dark") ---- */
-body.dark {
-  --bg: #1a1008;
-  --navbar-bg: #2c1a0e;
-  --navbar-text: #e8ddd4;
-  --card-bg: #2e1f12;
-  --text: #e8ddd4;
-  --text-light: #c4a882;
-  --button-bg: #8b5e3c;
-  --button-text: #fff;
-  --delete-bg: #8b2020;
-  --border: #4a2f1a;
-  --input-bg: #3a2510;
-}
 
-/* ---- base ---- */
+
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -42,7 +30,7 @@ body {
   font-size: 16px;
 }
 
-/* ---- navbar ---- */
+
 .navbar {
   background-color: var(--navbar-bg);
   display: flex;
@@ -66,23 +54,10 @@ body {
   text-decoration: underline;
 }
 
-/* ---- dark mode button ---- */
-.dark-mode-btn {
-  margin-left: auto;
-  background-color: var(--button-bg);
-  color: var(--button-text);
-  border: 1px solid var(--border);
-  padding: 6px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-}
 
-.dark-mode-btn:hover {
-  opacity: 0.85;
-}
 
-/* ---- home page ---- */
+
+
 .home-page {
   background-color: var(--bg);
   min-height: 80vh;
@@ -111,7 +86,7 @@ body {
   color: var(--text-light);
 }
 
-/* ---- shop page ---- */
+
 .shop-page {
   display: flex;
   min-height: 80vh;
@@ -128,7 +103,6 @@ body {
   color: var(--text-light);
 }
 
-/* ---- sidebar ---- */
 .sidebar {
   width: 200px;
   padding: 20px;
@@ -164,7 +138,7 @@ body {
   cursor: pointer;
 }
 
-/* ---- product grid ---- */
+
 .shop-main {
   flex: 1;
   padding: 20px;
@@ -176,7 +150,7 @@ body {
   gap: 16px;
 }
 
-/* ---- product card ---- */
+
 .product-card {
   background-color: var(--card-bg);
   border-radius: 10px;
@@ -246,7 +220,7 @@ body {
   opacity: 0.85;
 }
 
-/* ---- admin page ---- */
+
 .admin-page {
   padding: 20px;
   max-width: 900px;
@@ -271,7 +245,7 @@ body {
   gap: 16px;
 }
 
-/* ---- coffee form ---- */
+
 .coffee-form {
   background-color: var(--card-bg);
   border-radius: 10px;
