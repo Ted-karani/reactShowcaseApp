@@ -9,6 +9,8 @@
 //remember to create a branch for this one to get more marks
 // anything ellse i remember i write it here to avoid forgtetting
 
+
+
 function Sidebar(props) {
   const searchText = props.searchText
   const onSearchChange = props.onSearchChange
@@ -62,37 +64,37 @@ function Sidebar(props) {
         <label className="filter-label">
           <input
             type="checkbox"
-            checked={isChecked('Location 1')}
-            onChange={function () { handleCheckbox('Location 1') }}
+            checked={isChecked('Nairobi')}
+            onChange={function () { handleCheckbox('Nairobi') }}
           />
-          Location 1
+          Nairobi
         </label>
 
         <label className="filter-label">
           <input
             type="checkbox"
-            checked={isChecked('Location 2')}
-            onChange={function () { handleCheckbox('Location 2') }}
+            checked={isChecked('Thika')}
+            onChange={function () { handleCheckbox('Thika') }}
           />
-          Location 2
+          Thika
         </label>
 
         <label className="filter-label">
           <input
             type="checkbox"
-            checked={isChecked('Location 3')}
-            onChange={function () { handleCheckbox('Location 3') }}
+            checked={isChecked('Kiambu')}
+            onChange={function () { handleCheckbox('Kiambu') }}
           />
-          Location 3
+          Kiambu
         </label>
 
         <label className="filter-label">
           <input
             type="checkbox"
-            checked={isChecked('Location 4')}
-            onChange={function () { handleCheckbox('Location 4') }}
+            checked={isChecked('Meru')}
+            onChange={function () { handleCheckbox('Meru') }}
           />
-          Location 4
+          Meru
         </label>
 
       </div>

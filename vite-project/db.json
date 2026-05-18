@@ -6,7 +6,7 @@
       "description": "smooth rich taste similar to cocoa or dark chocolate",
       "origin": "Brazil",
       "price": 10,
-      "location": "Location 1"
+      "location": "Nairobi"
     },
     {
       "id": "2",
@@ -14,7 +14,7 @@
       "description": "Mild coffee with almond or hazelnut-like falvors",
       "origin": "Ethiopia",
       "price": 12,
-      "location": "Location 2"
+      "location": "Thika"
     },
     {
       "id": "3",
@@ -22,7 +22,7 @@
       "description": "Bright and sweet with strawberry and blueberry notes",
       "origin": "Ethiopia",
       "price": 11.5,
-      "location": "Location 1"
+      "location": "Nairobi"
     },
     {
       "id": "4",
@@ -30,7 +30,7 @@
       "description": "sharp, lively flavor with orange or lemon-like acidity",
       "origin": "Kenya",
       "price": 9.5,
-      "location": "Location 3"
+      "location": "Kiambu"
     },
     {
       "id": "5",
@@ -38,7 +38,7 @@
       "description": "Sweet buttery flavor with smooth balance",
       "origin": "Costa Rica",
       "price": 13,
-      "location": "Location 4"
+      "location": "Meru"
     },
     {
       "id": "6",
@@ -46,7 +46,7 @@
       "description": "Earthy taste with hints of spice and herbs",
       "origin": "Indonesia",
       "price": 10.5,
-      "location": "Location 2"
+      "location": "Thika"
     },
     {
       "id": "7",
@@ -54,7 +54,7 @@
       "description": "Balanced coffee with soft sweetness and creamy texture",
       "origin": "Guatemala",
       "price": 14,
-      "location": "Location 3"
+      "location": "Kiambu"
     },
     {
       "id": "8",
@@ -62,7 +62,7 @@
       "description": "Strong roasted flavor commonly used in espresso drinks",
       "origin": "Italia",
       "price": 11,
-      "location": "Location 4"
+      "location": "Meru"
     },
     {
       "id": "9",
@@ -70,7 +70,7 @@
       "description": "black coffee with arrowroots",
       "origin": "Kenya",
       "price": 10,
-      "location": "Location 2"
+      "location": "Thika"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

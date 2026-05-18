@@ -11,7 +11,6 @@
 
 import { useState, useEffect } from 'react'
 
-
 function CoffeeForm(props) {
   const onSubmit = props.onSubmit
   const editingCoffee = props.editingCoffee
@@ -21,7 +20,7 @@ function CoffeeForm(props) {
   const [description, setDescription] = useState('')
   const [origin, setOrigin] = useState('')
   const [price, setPrice] = useState('')
-  const [location, setLocation] = useState('Location 1')
+  const [location, setLocation] = useState('Nairobi')
 
   useEffect(function () {
     if (editingCoffee) {
@@ -53,7 +52,7 @@ function CoffeeForm(props) {
     <form className="coffee-form" onSubmit={handleSubmit}>
 
       <h2 className="form-title">
-        {editingCoffee ? 'Edit Product' : 'Add New Product'}
+        {editingCoffee ? 'Edit Product' : 'Add New Coffee'}
       </h2>
 
       <div className="form-group">
@@ -101,10 +100,10 @@ function CoffeeForm(props) {
           value={location}
           onChange={function (e) { setLocation(e.target.value) }}
         >
-          <option value="Location 1">Location 1</option>
-          <option value="Location 2">Location 2</option>
-          <option value="Location 3">Location 3</option>
-          <option value="Location 4">Location 4</option>
+          <option value="Nairobi">Nairobi</option>
+          <option value="Thika">Thika</option>
+          <option value="Kiambu">Kiambu</option>
+          <option value="Meru">Meru</option>
         </select>
       </div>
 

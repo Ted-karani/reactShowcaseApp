@@ -31,7 +31,8 @@ function Home() {
     <div className="home-page">
       <h1 className="home-title">Coffee R Us</h1>
       <p className="home-subtitle">The go to store for your coffee needs</p>
-      <p className="home-phone">Call us: 0712345678</p>
+      <p className="home-phone">Call us: 0758777339 </p><br />
+      <p> <strong>welcome</strong></p>
     </div>
   )
 }
