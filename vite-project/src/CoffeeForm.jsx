@@ -1,3 +1,14 @@
+// i use useeffect and usestate
+//the useeffect i can use maybe for the setname and setorigin and set parts
+//i can use props for the submitting part and cancel part
+// remember to use prevent default
+//then i create a form for the coffee
+// i can ask Sam or my group on the useeffect part 
+// from my group i pass the name and description etc in the function for handling submit and prevent default
+// i use .value.target
+
+
+
 import { useState, useEffect } from 'react'
 
 

@@ -1,3 +1,17 @@
+//THIS PART ILL USE CONTEXT AND PROVIDER
+//also i use usestate for the coffee list and loading and errors
+// i also fetch from here from db.json , my hardcoded data is there
+// i save the error in catch and maybe display error occured  then i use and array for data
+// i use the length + 1, i refer to canvas
+//i use ...coffelist 
+//the shopcontext should have the provider hopefully it works
+//i confirm in canvas
+// i use the patch and get and delete. 
+// the crud method quite hard ill check form canvas or i ask my group
+// so i add +id after using the fetch so that it tells  the code which id to change specifically
+
+
+
 import { createContext, useContext, useState, useEffect } from "react"
 
 const ShopContext = createContext()
@@ -8,55 +22,74 @@ export function ShopProvider({ children }) {
     const [error, setError] = useState('')
 
     useEffect(function () {
-    fetch('/db.json')
+        fetch('http://localhost:3000/coffee')
+            .then(function (response) {
+                return response.json()
+            })
+            .then(function (data) {
+                setCoffeeList(data)
+                setLoading(false)
+            })
+            .catch(function () {
+                setError('An error occurred')
+                setLoading(false)
+            })
+    }, [])
+
+    function addCoffee(newCoffee) {
+        fetch('http://localhost:3000/coffee', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newCoffee)
+        })
         .then(function (response) {
             return response.json()
         })
         .then(function (data) {
-            setCoffeeList(data.coffee)
-            setLoading(false)
+            setCoffeeList([...coffeeList, data])
         })
-        .catch(function (err) {
-            console.log('Fetch error:', err)
-            setError('An error occurred')
-            setLoading(false)
-        })
-}, [])
-
-    function addCoffee(newCoffee) {
-        const newId = coffeeList.length + 1
-        const coffeeToAdd = {
-            id: newId,
-            name: newCoffee.name,
-            description: newCoffee.description,
-            origin: newCoffee.origin,
-            price: newCoffee.price,
-            location: newCoffee.location,
-        }
-        const newList = [...coffeeList, coffeeToAdd]
-        setCoffeeList(newList)
     }
 
     function updateCoffee(id, updates) {
-        const newList = []
-        for (let i = 0; i < coffeeList.length; i++) {
-            if (coffeeList[i].id === id) {
-                newList.push(updates)
-            } else {
-                newList.push(coffeeList[i])
+        fetch('http://localhost:3000/coffee/' + id, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(updates)
+        })
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (data) {
+            const newList = []
+            for (let i = 0; i < coffeeList.length; i++) {
+                if (coffeeList[i].id === id) {
+                    newList.push(data)
+                } else {
+                    newList.push(coffeeList[i])
+                }
             }
-        }
-        setCoffeeList(newList)
+            setCoffeeList(newList)
+        })
     }
 
+
     function deleteCoffee(id) {
-        const newList = []
-        for (let i = 0; i < coffeeList.length; i++) {
-            if (coffeeList[i].id !== id) {
-                newList.push(coffeeList[i])
+        fetch('http://localhost:3000/coffee/' + id, {
+            method: 'DELETE'
+        })
+        .then(function () {
+            const newList = []
+            for (let i = 0; i < coffeeList.length; i++) {
+                if (coffeeList[i].id !== id) {
+                    newList.push(coffeeList[i])
+                }
             }
-        }
-        setCoffeeList(newList)
+            setCoffeeList(newList)
+        })
     }
 
     return (

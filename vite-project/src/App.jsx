@@ -1,3 +1,8 @@
+// i use the routes for the home and shop andadmin 
+// confirm in canvas
+//the routes should be in the navbar
+//i import anything ill use
+
 import {  Routes, Route,  } from "react-router-dom"
 import './App.css'
 import Navbar from "./Navbar";

@@ -1,3 +1,9 @@
+// this is the admin part so i create a form for the admin with name description price origin 
+// also below that its the now part where admin can delete the coffee and update
+// i create update if possible ill try fro canvas and research
+// i write my functions here
+
+
 import { useState } from 'react'
 import { useShop } from './Context'
 import CoffeeForm from './CoffeeForm'
